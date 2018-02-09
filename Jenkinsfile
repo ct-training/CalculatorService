@@ -1,4 +1,4 @@
-node('build') {
+node('master') {
    def mvnHome
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
@@ -24,7 +24,7 @@ node('build') {
    }
 }
 
-node('deploy') {
+node('master') {
     stage('Deploy') {
     sh '''#!/bin/bash -l
     wget http://mirror.fibergrid.in/apache/tomcat/tomcat-8/v8.5.14/bin/apache-tomcat-8.5.14.tar.gz
