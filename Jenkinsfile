@@ -32,7 +32,7 @@ node('slave') {
     if [ ! -d /opt/tomcat ]
     then
     	sudo mkdir /opt/tomcat
-    	sudo tar -zxvf apache-tomcat-8.5.14.tar.gz -C /opt/tomcat --strip=1
+    	sudo tar -zxvf apache-tomcat-8.5.27.tar.gz -C /opt/tomcat --strip=1
         sudo sed -i -e 's/8080/8081/g' /opt/tomcat/conf/server.xml
     fi
     
