@@ -31,14 +31,14 @@ node('slave') {
 
     if [ ! -d /opt/tomcat ]
     then
-    	mkdir /opt/tomcat
-    	tar -zxvf apache-tomcat-8.5.14.tar.gz -C /opt/tomcat --strip=1
-        sed -i -e 's/8080/8081/g' /opt/tomcat/conf/server.xml
+    	sudo mkdir /opt/tomcat
+    	sudo tar -zxvf apache-tomcat-8.5.14.tar.gz -C /opt/tomcat --strip=1
+        sudo sed -i -e 's/8080/8081/g' /opt/tomcat/conf/server.xml
     fi
     
     cd /opt/tomcat/bin/
-    ./shutdown.sh
-    nohup sh startup.sh &
+    sudo ./shutdown.sh
+    sudo nohup sh startup.sh &
     '''
     }
 }
