@@ -27,7 +27,7 @@ node('master') {
 node('slave') {
     stage('Deploy') {
     sh '''#!/bin/bash -l
-    wget http://mirror.fibergrid.in/apache/tomcat/tomcat-8/v8.5.14/bin/apache-tomcat-8.5.14.tar.gz
+    wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
 
     if [ ! -d /opt/tomcat ]
     then
